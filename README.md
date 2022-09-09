@@ -9,3 +9,5 @@ This repository contains customized functions for downloading occurrence data fr
 
 
 All functions return a data.frame with species names and their coordinates in lon+lat
+
+The more_functions functions include an expandend gbifdata function, that retrieves more fields that gbifdata. the gbif_mel function requires a username obtained from: www.geonames.org and enabling the webservices on https://www.geonames.org/enablefreewebservice
