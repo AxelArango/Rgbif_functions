@@ -26,7 +26,7 @@ gbifdata<-function(sp.list,limit){
   match.a<-which(is.na(match(splist.a,presence$sp)))
   nulls<-splist.a[match.a]
   print(nulls)
-  uniquepresences<-unique(presence)
+  uniquepresences<-unique(presence[,1:3])
   
 }
 
@@ -79,7 +79,7 @@ gbifgeometry<-function(area.a,limit){
     spdf<-SpatialPointsDataFrame(coords = coordsdf.longlat,data = data.frame(df$sp,coordsdf.longlat),proj4string =crs(area.a))
     int<-raster::intersect(spdf,area.a)
     dataint<-int@data
-    dataint<-unique(dataint)
+    dataint<-unique(dataint[,1:3)
 }
 #####
 gbifsparea<-function(sp.list,area.a,limit){
